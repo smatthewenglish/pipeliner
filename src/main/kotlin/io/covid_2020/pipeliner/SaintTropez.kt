@@ -30,12 +30,12 @@ fun main() {
         stateMap[state] = Info(confirmed, deaths, recovered)
     }
 
-//    stateMap.forEach() {
-//        println("${it.key}\n" +
-//                "confirmed: ${it.value.confirmed}\n" +
-//                "deaths: ${it.value.deaths}\n" +
-//                "recovered: ${it.value.recovered}\n\n")
-//    }
+    stateMap.forEach() {
+        println("${it.key}\n" +
+                "confirmed: ${it.value.confirmed}\n" +
+                "deaths: ${it.value.deaths}\n" +
+                "recovered: ${it.value.recovered}\n\n")
+    }
 
     val header: String = "state,confirmed,deaths,recovered"
     val fileWriter: FileWriter = FileWriter("csbs.csv")
