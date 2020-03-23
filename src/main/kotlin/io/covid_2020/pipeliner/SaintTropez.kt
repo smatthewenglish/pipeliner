@@ -5,7 +5,12 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.FileWriter
 
-fun main() {
+class SaintTropez
+
+fun main(args: Array<String>) {
+
+    println("lol")
+
     val stateMap: MutableMap<String, Info> = mutableMapOf()
 
     val address: String = "https://coronavirus-tracker-api.herokuapp.com/v2/locations?source=csbs"
@@ -39,6 +44,7 @@ fun main() {
 
     val header: String = "state,confirmed,deaths,recovered"
     val fileWriter: FileWriter = FileWriter("../covid-2020.io/public/data/csbs.csv")
+    //val fileWriter: FileWriter = FileWriter("csbs.csv")
     try {
         fileWriter.append("${header}\n")
 
