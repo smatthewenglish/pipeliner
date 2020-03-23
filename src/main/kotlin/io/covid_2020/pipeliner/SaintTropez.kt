@@ -38,7 +38,7 @@ fun main() {
     }
 
     val header: String = "state,confirmed,deaths,recovered"
-    val fileWriter: FileWriter = FileWriter("csbs.csv")
+    val fileWriter: FileWriter = FileWriter("../covid-2020.io/public/data/csbs.csv")
     try {
         fileWriter.append("${header}\n")
 
