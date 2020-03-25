@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     val locations: JSONArray = obj["locations"] as JSONArray
     locations.forEach() {
         val place = it as JSONObject
-        val state = place.get("state") as String
+        val state = place.get("province") as String
         val latest: JSONObject = place.get("latest") as JSONObject
 
         var confirmed: Int = latest.getInt("confirmed")
@@ -43,7 +43,7 @@ fun main(args: Array<String>) {
     }
 
     val header: String = "state,confirmed,deaths,recovered"
-    val fileWriter: FileWriter = FileWriter("../covid-2020.io/public/data/csbs.csv")
+    val fileWriter: FileWriter = FileWriter("../covid-2020.io/public/data/csbs_3.25.csv")
     //val fileWriter: FileWriter = FileWriter("csbs.csv")
     try {
         fileWriter.append("${header}\n")
